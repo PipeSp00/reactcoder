@@ -1,10 +1,29 @@
-import { IoCartOutline } from "react-icons/io5";
+import { BsCart } from "react-icons/bs";
+import { IconContext } from "react-icons";
+
+
 
 
 const Navbar = () => {
     return  <header className="header"> 
-    <div className="header__nav"><h3>Home</h3><h3>Bases</h3><h3>Soportes</h3><h3>Iluminación</h3><h3>Audio</h3></div>
-    <div className="carrito"><IoCartOutline /> </div>
-    </header>
+
+    <div className="logo">
+        <img src="" alt="" />
+    </div>
+    <nav className="navMenu">
+        <a href="#">HOME</a>
+        <a href="#">LUZ</a>
+        <a href="#">AUDIO</a>
+        <a href="#">DESK</a>
+        <a href="#">CONTACTO</a>
+    <div className="dot"></div>
+    </nav>
+    
+    <div> 
+    <BsCart size={25} className="cart"/>
+    </div>
+
+</header>
 }
+
 export default Navbar
