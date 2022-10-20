@@ -1,7 +1,6 @@
 
 import './App.scss';
-import { BsCart } from "react-icons/bs";
-import { IconContext } from "react-icons";
+import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar'
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
     
     <div className="App">
       <NavBar /> 
-      
+      <ItemListContainer greetings = "Bienvenido Tutor" />
     </div>
   );
 }
