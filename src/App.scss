@@ -149,10 +149,10 @@ padding : 20px;
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #fddb3a, #f2f2f2);
+  background: linear-gradient(60deg, #fddb3a, #f2f2f2, #fddb3a, #f2f2f2);
   border-radius: calc(2 * var(--borderWidth));
   z-index: -1;
-  animation: animatedgradient 5s ease alternate infinite;
+  animation: animatedgradient 4s ease alternate infinite;
   background-size: 300% 300%;
 }
 

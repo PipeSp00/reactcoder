@@ -9,7 +9,7 @@ function App() {
     
     <div className="App">
       <NavBar /> 
-      <ItemListContainer greetings = "Bienvenido Tutor" />
+      <ItemListContainer greetings = "Bienvenido a la tienda online Ordesk" />
     </div>
   );
 }
