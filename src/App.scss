@@ -20,7 +20,7 @@ header {
   grid-template-columns: 10vw 80vw 10vw;
   align-items: center;
   justify-items: center;
-  padding: 20px 0;
+  padding: 30px 0;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -51,15 +51,15 @@ header {
 }
 
 .navMenu a:hover {
-  color: #fddb3a;
+  color: #1c2897;
 }
 
 .navMenu .dot {
   width: 6px;
   position: absolute;
-  top: 50px;
+  top: 60px;
   height: 6px;
-  background: #fddb3a;
+  background: #1c2897;
   border-radius: 50%;
   opacity: 0;
   -webkit-transform: translateX(30px);
@@ -120,6 +120,8 @@ header {
   width: 80px;
   margin: 0;
   padding: 0px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
   
   
 }
@@ -172,4 +174,71 @@ padding : 20px;
 .greetings {
   display: flex;
   justify-content: center;
+}
+
+.itemTienda {
+
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: #191919;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .itemTiend::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #ffce00;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.itemTiend:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.itemTiend::after {
+  content: "CORSAIR";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+
+.comprar {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #ffce00;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.itemTienda:hover .contentBox .comprar {
+  top: 0;
+  opacity: 1;
 }
