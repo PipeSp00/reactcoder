@@ -3,7 +3,7 @@ import { Item}  from "./Item"
 const ItemListContainer = () => {
 
     return (
-        <div>
+        <div className="itemList">
             <Item />
         </div>
         

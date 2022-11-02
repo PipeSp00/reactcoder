@@ -18,6 +18,24 @@ const products = [
       categoria: "hombre",
     },
     {
+      nombre: "Tenis Ultrabux2",
+      stock: 5,
+      precio: 4200,
+      img:
+        "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c60b90c34e0f413f916caa4300d3589f_9366/tenis-galaxy-4.jpg",
+      id: 1,
+      categoria: "hombre",
+    },
+    {
+      nombre: "Tenis Ultrabux2",
+      stock: 5,
+      precio: 4200,
+      img:
+        "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c60b90c34e0f413f916caa4300d3589f_9366/tenis-galaxy-4.jpg",
+      id: 1,
+      categoria: "hombre",
+    },
+    {
       nombre: "Tesla",
       stock: 5,
       precio: 420000000,

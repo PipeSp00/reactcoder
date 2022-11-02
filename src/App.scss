@@ -171,41 +171,49 @@ padding : 20px;
 	}
 }
 
-.greetings {
-  display: flex;
-  justify-content: center;
-}
+
 
 .itemTienda {
-
+    
+    margin: 8px;
     position: relative;
-    width: 320px;
-    height: 480px;
-    background: #191919;
-    border-radius: 20px;
+    width: 300px;
+    height: 380px;
+    background: #5c5454;
+    border-radius: 5px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .itemTiend::before {
+  .itemTienda:hover {
+    scale: 1.05;
+  }
+
+  .itemTienda::before {
   content: "";
   position: absolute;
   top: -50%;
   width: 100%;
   height: 100%;
-  background: #ffce00;
+  background: #121853;
   transform: skewY(345deg);
   transition: 0.5s;
+  
 }
 
-.itemTiend:hover::before {
+.itemTienda:hover::before {
   top: -70%;
   transform: skewY(390deg);
 }
 
-.itemTiend::after {
-  content: "CORSAIR";
+.itemTienda::after {
+  content: "";
+  text-align: center;
   position: absolute;
-  bottom: 0;
+  top: 20px;
   left: 0;
   font-weight: 600;
   font-size: 6em;
@@ -222,6 +230,36 @@ padding : 20px;
   z-index: 1;
 }
 
+.imgProd {
+  padding-top: 30px;
+  height: 240px;
+
+  width: auto;
+}
+
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  
+  padding-top: 15px;
+  
+}
+.nombreItem {
+  text-align: center;
+  color: #f2f2f2;
+  font-weight: 300;
+}
+
+.itemTienda .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
 
 .comprar {
   position: relative;
@@ -229,16 +267,28 @@ padding : 20px;
   opacity: 0;
   padding: 10px 30px;
   margin-top: 15px;
-  color: #000000;
+  border: 1px solid #000;
   text-decoration: none;
-  background: #ffce00;
-  border-radius: 30px;
+  background: #121853;
+  border-radius: 10px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1px, solid;
   transition: 0.5s;
 }
 
+.comprar:hover {
+transition: 400ms;
+background-color: #515694;
+}
+
 .itemTienda:hover .contentBox .comprar {
-  top: 0;
+  top: -10px;
   opacity: 1;
+}
+
+.itemList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: fit-content;
 }

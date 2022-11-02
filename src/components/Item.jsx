@@ -20,14 +20,17 @@ export const Item = () => {
             <div className="itemTienda" key={id} >
                 <div className="contentBox">
                     <div className="imgBox" >
-                        <img  src={img} alt="" />
+                        <img className="imgProd" src={img} alt="" />
                     </div>
                 <div className="itemInfo">
-                    <div>{nombre}</div>
-                    <div>{categoria}</div>
-                    <span className="precioItem">{precio}</span>
+                <h2 className="nombreItem">{nombre}</h2>
+                <h3 className="nombreItem">{precio}</h3>
                 </div>
-               <Button className ="comprar"/>
+                <div>
+                <Button onClick={(onclick)} content={("Añadir a carrito")} className ="comprar">
+                    
+                </Button>
+                </div> 
                </div>                
             </div>
 
