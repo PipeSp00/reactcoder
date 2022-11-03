@@ -1,8 +1,15 @@
 
 import logo from "../multimedia/logo.png"
+import {Link, NavLink} from "react-router-dom"
 import Cart from './Cart'
-const Navbar = () => {
+export const Navbar = () => {
 
+const links = [
+    {to "/", label: "HOME" }
+    {to "/", label: "LUZ" }
+    {to "/", label: "HOME" }
+    {to "/", label: "HOME" }
+]
     return  <header className="header"> 
 
     <div>
@@ -27,4 +34,3 @@ const Navbar = () => {
 
 }
 
-export default Navbar
