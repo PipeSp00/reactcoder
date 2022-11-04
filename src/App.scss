@@ -21,21 +21,24 @@ header {
   align-items: center;
   justify-items: center;
   padding: 30px 0;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100vw;
+  
+  margin: auto;
   
 }
 
 .navMenu {
   display: grid;
     grid-auto-flow: column;
+    
     grid-gap: 30px;
     background-color: red($color: red);
 
 }
 
-.navMenu a {
+
+
+.navMenu .link {
   color: #f6f4e6;
   text-decoration: none;
   font-size: 1.2em;
@@ -46,11 +49,12 @@ header {
   
   
   
+  
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.navMenu a:hover {
+.navMenu .link:hover {
   color: #1c2897;
 }
 
@@ -68,23 +72,23 @@ header {
   transition: all 0.2s ease-in-out;
 }
 
-.navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(50px);
-  transform: translateX(50px);
+.navMenu .link:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(35px);
+  transform: translateX(35px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
-.navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(145px);
-  transform: translateX(145px);
+.navMenu .link:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(130px);
+  transform: translateX(130px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
-.navMenu a:nth-child(3):hover ~ .dot {
+.navMenu .link:nth-child(3):hover ~ .dot {
   -webkit-transform: translateX(240px);
   transform: translateX(240px);
   -webkit-transition: all 0.2s ease-in-out;
@@ -92,15 +96,15 @@ header {
   opacity: 1;
 }
 
-.navMenu a:nth-child(4):hover ~ .dot {
-  -webkit-transform: translateX(350px);
-  transform: translateX(350px);
+.navMenu .link:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(370px);
+  transform: translateX(370px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
-.navMenu a:nth-child(5):hover ~ .dot {
+.navMenu .link:nth-child(5):hover ~ .dot {
   -webkit-transform: translateX(480px);
   transform: translateX(480px);
   -webkit-transition: all 0.2s ease-in-out;
@@ -171,6 +175,13 @@ padding : 20px;
 	}
 }
 
+.backLink {
+  position: absolute;
+  top:100px;
+  right:20px;
+  font-size: x-large;
+  color: #f2f2f2;
+}
 
 
 .itemTienda {
@@ -179,7 +190,7 @@ padding : 20px;
     position: relative;
     width: 300px;
     height: 380px;
-    background: #5c5454;
+    background: #b9bac477;
     border-radius: 5px;
     overflow: hidden;
     display: flex;
@@ -198,7 +209,7 @@ padding : 20px;
   top: -50%;
   width: 100%;
   height: 100%;
-  background: #121853;
+  background: #ffffff;
   transform: skewY(345deg);
   transition: 0.5s;
   
@@ -236,6 +247,7 @@ padding : 20px;
 
   width: auto;
 }
+
 
 
 .itemInfo {
@@ -276,6 +288,21 @@ padding : 20px;
   transition: 0.5s;
 }
 
+.buttonDetalle {
+  padding: 10px 30px;
+  position: relative;
+  top:150px;
+  margin-top: 15px;
+  border: 1px solid #000;
+  text-decoration: none;
+  background: #121853;
+  border-radius: 5px;
+  scale: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px, solid;
+  
+}
+
 .comprar:hover {
 transition: 400ms;
 background-color: #515694;
@@ -292,3 +319,65 @@ background-color: #515694;
   justify-content: center;
   width: fit-content;
 }
+
+.detalleContent {
+  display: flex;
+  
+}
+
+.detalleInfo {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+
+  justify-content: center;
+  padding: 100px;
+ 
+
+}
+.detalleInfo h3 {
+  text-align: justify;
+  color:#f2f2f2;
+  font-weight: 300;
+
+}
+.detallePrecio {
+  font-size: x-large;
+  border: 1px solid #f2f2f2;
+  font-weight: bold;
+  padding: 10px 25px 10px 25px;
+  
+}
+.detalleInfo h2 {
+  text-align: left;
+  color:#f2f2f2;
+  font-weight: 400;
+  position: relative;
+  bottom: 100px;
+
+}
+
+.detalleImg {
+  height: 90vh;
+  width: 50vw;
+}
+
+.footer {
+  background-color: #0e1025;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 120px
+}
+.footer .h3 {
+  font-weight: 200;
+  font-size: medium;
+}
+
+.buttonDetalle:hover {
+  transition: 400ms;
+  background-color: #515694;
+  }

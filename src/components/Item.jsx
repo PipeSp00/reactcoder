@@ -1,42 +1,28 @@
-import { useState } from "react"
-import { useEffect } from "react"
-import {Button} from "./Button"
-import { getProducts } from "./api/productos"
-import {useParams} from 'react-router-dom'
 
-export const Item = () => {
+import { Button } from "./Button"
+import { useNavigate } from "react-router-dom"
+export const Item = (props) => {
 
-    const [productos, setProductos] = useState([])
-    const {categoriaId} = useParams()
-    console.log(categoriaId)
-    useEffect (()=>{
-        getProducts(categoriaId)
-        .then(data => setProductos(data))
-        
-        
-        
-    },[categoriaId])
-
+ 
+    const navegar = useNavigate()
     return (
-        
-        
-        productos.map(({id, nombre, categoria, precio, stock, imagen}) => (
+    
 
-            <div className="itemTienda" key={id} >
+            <div className="itemTienda" onClick={() => navegar(`/producto/${props.id}`)} >
                 <div className="contentBox">
                     <div className="imgBox" >
-                        <img className="imgProd" src={imagen} alt="" />
+                        <img className="imgProd" src={props.imagen} alt="" />
                     </div>
                 <div className="itemInfo">
-                <h2 className="nombreItem">{nombre}</h2>
-                <h3 className="nombreItem">{precio}</h3>
+                <h2 className="nombreItem">{props.nombre}</h2>
+                <h3 className="nombreItem">${props.precio}</h3>
                 </div>
-                <div>
-                <Button onClick={(onclick)} content={("Añadir a carrito")} className ="comprar">
+        
+               </div>   
+
+               <Button onClick={(onclick)} content={("Añadir a carrito")} className ="comprar">
                     
-                </Button>
-                </div> 
-               </div>                
+                </Button>             
             </div>      
            
            
@@ -45,6 +31,4 @@ export const Item = () => {
         
     
     ) 
-    )
-    )
 }

@@ -3,25 +3,25 @@ import logo from "../multimedia/logo.png"
 import {Link, NavLink} from "react-router-dom"
 import Cart from './Cart'
 export const Navbar = () => {
-
-const links = [
-    {to "/", label: "HOME" }
-    {to "/", label: "LUZ" }
-    {to "/", label: "HOME" }
-    {to "/", label: "HOME" }
-]
-    return  <header className="header"> 
-
-    <div>
-    <img src={logo} className="logo" alt="logo" />
-    </div>
-    <nav className="navMenu">
     
-        <a href="#">HOME</a>
-        <a href="#">LUZ</a>
-        <a href="#">AUDIO</a>
-        <a href="#">DESK</a>
-        <a href="#">CONTACTO</a>
+    const links = ["Luz", "Audio", "Desk", "Domotica"]
+    return (<header className="header"> 
+
+    <Link to ='/'><img src={logo} className="logo" alt="logo" /></Link>
+    
+    
+
+    <nav className="navMenu">
+
+    {links.map((categ) => {
+
+        return (<NavLink className="link" to={`/categoria/${categ.toLowerCase()} `} key={categ}> 
+        {categ}
+
+        </NavLink>)
+    })}
+        
+
 
     <div className="dot"></div>
     </nav>
@@ -30,7 +30,7 @@ const links = [
     <Cart />
     
 
-</header>
+</header>)
 
 }
 

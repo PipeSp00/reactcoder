@@ -1,13 +1,13 @@
 import { Navbar } from "./NavBar"
 import { Footer } from "./Footer"
+import { Outlet } from "react-router-dom"
 
-
-export const Userlayout = ({ children }) => {
+export const Userlayout = () => {
 
     return (
         <div>
             <Navbar/>
-                { children }
+                 <Outlet/>
             <Footer/>
         </div>
     )

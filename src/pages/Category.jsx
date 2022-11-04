@@ -1,14 +1,15 @@
-import { Item } from "../components/Item"
-import { Userlayout } from "../components/UserLayout"
+
+import ItemListContainer from "../components/ItemListContainer"
+
 
 export const Category = () => {
 
 return (
-        <Userlayout>
+        
             <div className="itemList">
-            <Item/>
+            <ItemListContainer/>
             </div>
-        </Userlayout>
+        
 )
     
 }
