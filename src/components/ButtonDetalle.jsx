@@ -1,8 +1,8 @@
 
 
-export const ButtonDetalle = ({onClick, content}) => (
-
-<button className="buttonDetalle" onClick={onClick}>
-        <h3 >{content}</h3>
+export const ButtonDetalle = ({ onClick,  children}) => (
+    <button className="buttonDetalle" onClick={onClick} >
+    {children} 
     </button>
-)
+  );
+ 

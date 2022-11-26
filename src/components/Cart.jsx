@@ -5,8 +5,6 @@ const Cart = () => {
 
         <div className="cartDiv"> 
         <BsCart size={40} className="cart"/>
-    
-
         </div>
         
         )

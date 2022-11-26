@@ -289,10 +289,7 @@ padding : 20px;
 }
 
 .buttonDetalle {
-  padding: 10px 30px;
-  position: relative;
-  top:150px;
-  margin-top: 15px;
+  
   border: 1px solid #000;
   text-decoration: none;
   background: #121853;
@@ -300,6 +297,9 @@ padding : 20px;
   scale: 1.2;
   text-transform: uppercase;
   letter-spacing: 1px, solid;
+  color: white;
+  margin: 5%;
+  padding: 3%;
   
 }
 
@@ -380,4 +380,35 @@ background-color: #515694;
 .buttonDetalle:hover {
   transition: 400ms;
   background-color: #515694;
-  }
+  } 
+
+
+.botones {
+  width: 300px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.agregarProductos {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.buttonAddCart {
+  
+  border: 1px solid #000;
+  text-decoration: none;
+  background: #121853;
+  border-radius: 5px;
+ 
+  text-transform: uppercase;
+  letter-spacing: 1px, solid;
+  color: white;
+  padding: 3%;
+  
+}

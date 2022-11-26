@@ -1,36 +1,42 @@
+import logo from "../multimedia/logo.png";
+import { Link, NavLink } from "react-router-dom";
+import Cart from "./Cart";
+import { useCartContext } from "../context/cartContext";
 
-import logo from "../multimedia/logo.png"
-import {Link, NavLink} from "react-router-dom"
-import Cart from './Cart'
+
+const links = ["Luz", "Audio", "Desk", "Domotica"];
 export const Navbar = () => {
-    
-    const links = ["Luz", "Audio", "Desk", "Domotica"]
-    return (<header className="header"> 
+    const {cart} = useCartContext ()
+    console.log ({cart})
+    return (
+        <header className="header">
+            <Link to="/">
+                <img src={logo} className="logo" alt="logo" />
+            </Link>
 
-    <Link to ='/'><img src={logo} className="logo" alt="logo" /></Link>
-    
-    
+            <nav className="navMenu">
+                {links.map((categ) => {
+                    return (
+                        <NavLink
+                            className="link"
+                            to={`/categoria/${categ.toLowerCase()} `}
+                            key={categ}
+                        >
+                            {categ}
+                        </NavLink>
+                    );
+                })}
 
-    <nav className="navMenu">
+                <div className="dot"></div>
+            </nav>
+            <Link to="/carrito"><Cart/>
+           <h1> {cart.length}
+            </h1>
 
-    {links.map((categ) => {
-
-        return (<NavLink className="link" to={`/categoria/${categ.toLowerCase()} `} key={categ}> 
-        {categ}
-
-        </NavLink>)
-    })}
         
+            </Link>
 
-
-    <div className="dot"></div>
-    </nav>
-    
-
-    <Cart />
-    
-
-</header>)
-
-}
-
+            
+        </header>
+    );
+};
