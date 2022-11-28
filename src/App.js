@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { Category } from './pages/Category';
 import { Detalle } from './pages/Detalle'
 import { Compras } from './pages/Compras'
+import { Checkout } from './pages/Checkout'
 import { Userlayout } from './components/UserLayout';
 import {createContext, useContext} from 'react';
 import { CartProvider} from './context/cartContext';
@@ -20,9 +21,9 @@ function App() {
       <Routes>
         <Route path ={"/"} element={<Userlayout/>}>
           <Route path = {"/"} index element={<Home/>} />
+          <Route path = {"/checkout"}element={<Checkout/>} />
           <Route path = {"/categoria/:categoriaId"} element={<Category/>} />
-          <Route path = {"/carrito"} element={<Compras
-          />} />
+          <Route path = {"/carrito"} element={<Compras/>} />
           <Route path = {"/producto/:productoId"} element={<Detalle/>} />
         </Route>
         

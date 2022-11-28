@@ -8,12 +8,15 @@ export const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState ([])
 
+    const total = () => cart.reduce ((acumulador, producto) => acumulador + producto.precio * producto.cantidad, 0)
 
     const removeProduct = (id) => {
-        const newCart = cart.filter((product) => product.id !== id);
+        const newCart = cart.filter((producto) => producto.id !== id);
     setCart(newCart)
 
     }
+
+    const emptyCart = () => setCart([])
     const addProduct = (item, cantidad) => {
 
 
@@ -34,7 +37,9 @@ export const CartProvider = ({children}) => {
 
         cart, 
         addProduct,
-        removeProduct
+        removeProduct,
+        total,
+        emptyCart
     }
 
 

@@ -4,27 +4,36 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { getInfo } from "../components/api/productos";
 import { useState } from "react";
-import { ButtonDetalle } from "../components/ButtonDetalle";
 import { NavLink } from "react-router-dom";
 import { Counter } from "../components/Counter";
 import { useCartContext } from "../context/cartContext";
 
-
-
 export const Detalle = () => {
-    
-    const {addProduct} = useCartContext()
+    const { addProduct } = useCartContext();
 
     const [producto, setProducto] = useState([]);
     const { productoId } = useParams();
-    ;
     useEffect(() => {
         getInfo(productoId).then((data) => setProducto(data));
     }, [productoId]);
 
     const handleAdd = (cantidad) => {
-        addProduct(producto, cantidad)
+        addProduct(producto, cantidad);
+    };
 
+    if (!Object.keys(producto).length) {
+        return (
+            <div class="spinner-wrapper">
+                <div class="spinner">
+                    <div class="sk-folding-cube">
+                        <div class="sk-cube1 sk-cube"></div>
+                        <div class="sk-cube2 sk-cube"></div>
+                        <div class="sk-cube4 sk-cube"></div>
+                        <div class="sk-cube3 sk-cube"></div>
+                    </div>
+                </div>
+            </div>
+        );
     }
     return (
         <div className="detalleContent">
@@ -42,6 +51,7 @@ export const Detalle = () => {
                 <div>
                     <Counter onAdd={handleAdd} />
                 </div>
+                
             </div>
         </div>
     );

@@ -1,13 +1,14 @@
 
 import { useState } from "react"
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import { ButtonDetalle } from "./ButtonDetalle";
 
 
 
 export const Counter = ({onAdd}) => {
 
-    
+         const notify = () => toast("Se agrego el producto al carrito!");
         const [contador, setContador] = useState(0);
       
         const agregarCarrito = () => {
@@ -27,20 +28,23 @@ export const Counter = ({onAdd}) => {
 
           <div className="agregarProductos">
             <div className="botones" >
-      <ButtonDetalle  className="buttonDetalle" onClick={agregarCarrito}  > AGREGAR</ButtonDetalle>
-      <span className="contadordisplay">{contador}</span>
-      <ButtonDetalle  className="buttonDetalle" onClick={restarCarrito} > SACAR </ButtonDetalle>
+      <ButtonDetalle onClick={agregarCarrito}  > +</ButtonDetalle>
+      <span className="contadordisplay"><h3>
+      {contador}
+        </h3></span>
+      <ButtonDetalle  className="buttonDetalle" onClick={restarCarrito} >- </ButtonDetalle>
       </div>
       <div>
       <ButtonDetalle onClick={()=> {
         if (contador) {
          onAdd(contador)
-        
+         setContador(contador * 0)
+         notify ()
         } 
 
-      } }> asassa</ButtonDetalle>
+      } }>  <ToastContainer /> Agregar al carrito</ButtonDetalle>
       
-   
+     
       
       
     </div>

@@ -1,13 +1,11 @@
 import logo from "../multimedia/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import Cart from "./Cart";
-import { useCartContext } from "../context/cartContext";
 
 
 const links = ["Luz", "Audio", "Desk", "Domotica"];
 export const Navbar = () => {
-    const {cart} = useCartContext ()
-    console.log ({cart})
+    
     return (
         <header className="header">
             <Link to="/">
@@ -29,10 +27,7 @@ export const Navbar = () => {
 
                 <div className="dot"></div>
             </nav>
-            <Link to="/carrito"><Cart/>
-           <h1> {cart.length}
-            </h1>
-
+            <Link to="/carrito" style={{ textDecoration: 'none' }}><Cart/>
         
             </Link>
 

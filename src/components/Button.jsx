@@ -1,7 +1,7 @@
 
     
-export const Button = ({ onClick,  children}) => (
-    <button className="comprar" onClick={onClick} >
+export const Button = ({ onClick,  children, clase}) => (
+    <button className={clase} onClick={onClick} >
     {children} 
     </button>
   );
